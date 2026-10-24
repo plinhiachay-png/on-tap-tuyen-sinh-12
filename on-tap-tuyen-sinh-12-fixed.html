@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Ôn Tập Tuyển Sinh 12 - nền tảng ôn thi lớp 12 hiện đại với bài học, trắc nghiệm, flashcard, Pomodoro và theo dõi tiến độ.">
+<meta name="theme-color" content="#2563eb">
+<title>Ôn Tập Tuyển Sinh 12 | Học tập & Luyện thi lớp 12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Be Vietnam Pro",system-ui,sans-serif;background:#f5f8ff;color:#172033;line-height:1.6}
+:root{--b:#2563eb;--b2:#1d4ed8;--g:#10b981;--ink:#172033;--muted:#64748b;--card:#fff;--line:#e5eaf3;--soft:#eff6ff;--danger:#ef4444;--shadow:0 12px 35px rgba(31,52,93,.09)}
+body.dark{background:#0b1220;color:#e5e7eb;--card:#111a2b;--line:#243148;--muted:#9aa8bd;--soft:#17243a;--shadow:0 12px 35px rgba(0,0,0,.25)}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1180px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;gap:16px}.logo{font-weight:800;font-size:19px;color:var(--b);display:flex;align-items:center;gap:9px;white-space:nowrap}.logo span{background:linear-gradient(135deg,var(--b),var(--g));color:white;padding:8px 10px;border-radius:12px}
+nav{display:flex;gap:4px;margin-left:auto}body.dark header{background:rgba(17,26,43,.94)}nav button,.iconbtn{background:transparent;color:var(--muted);padding:9px 11px;border-radius:10px}nav button:hover,.iconbtn:hover{background:var(--soft);color:var(--b)}.actions{display:flex;gap:4px}.search{width:220px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 12px;border-radius:11px;outline:none}.search:focus{border-color:var(--b)}
+main{min-height:calc(100vh - 150px)}.hero{padding:58px 0 38px}.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}.eyebrow{display:inline-flex;gap:8px;background:#e9f8f2;color:#087f5b;padding:7px 11px;border-radius:99px;font-size:13px;font-weight:700}.dark .eyebrow{background:#11372d}.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.05;margin:18px 0 16px;letter-spacing:-1.5px}.hero h1 em{font-style:normal;color:var(--b)}.hero p{color:var(--muted);max-width:650px;font-size:17px}.btn{padding:11px 16px;border-radius:11px;font-weight:700;display:inline-flex;align-items:center;gap:8px}.primary{background:var(--b);color:white}.primary:hover{background:var(--b2)}.secondary{background:var(--soft);color:var(--b)}.heroBtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.heroArt{background:linear-gradient(145deg,#dbeafe,#ecfdf5);border-radius:28px;padding:28px;min-height:310px;display:grid;place-items:center;position:relative;overflow:hidden}.dark .heroArt{background:linear-gradient(145deg,#14254a,#10362d)}.book{width:210px;height:230px;background:var(--card);border-radius:18px;box-shadow:var(--shadow);transform:rotate(-5deg);padding:24px;position:relative}.book:before{content:"";position:absolute;left:20px;top:24px;bottom:24px;width:5px;background:var(--b);border-radius:9px}.book h3{margin:10px 0 5px 18px;color:var(--b)}.book p{margin-left:18px;font-size:12px;color:var(--muted)}.float{position:absolute;background:var(--card);padding:10px 13px;border-radius:13px;box-shadow:var(--shadow);font-weight:700;font-size:13px}.f1{top:30px;right:20px}.f2{bottom:35px;left:20px}.section{padding:30px 0}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}.sectionHead h2{margin:0;font-size:27px}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:var(--shadow)}.subject{transition:.2s}.subject:hover{transform:translateY(-3px);border-color:#b9d1ff}.subjectIcon{font-size:29px}.subject h3{margin:8px 0 3px}.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--b),var(--g));border-radius:inherit}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat strong{font-size:27px;display:block}.stat span{font-size:13px;color:var(--muted)}
+.featureGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{min-height:170px}.feature .ico{font-size:28px}.feature h3{margin:8px 0 4px}
+.page{padding:35px 0}.pageTitle{margin-bottom:22px}.pageTitle h1{margin:0 0 4px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.pill{padding:8px 12px;border:1px solid var(--line);border-radius:99px;background:var(--card);color:var(--muted)}.pill.active{background:var(--b);border-color:var(--b);color:#fff}
+.list{display:grid;gap:12px}.lessonRow{display:flex;align-items:center;gap:14px}.lessonRow .grow{flex:1}.lessonRow h3{margin:0 0 3px;font-size:16px}.tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 8px;border-radius:99px;background:var(--soft);color:var(--b)}
+.quiz{max-width:850px;margin:auto}.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.question{font-size:23px;font-weight:700;line-height:1.4;margin:22px 0}.options{display:grid;gap:10px}.opt{padding:14px 16px;text-align:left;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px}.opt:hover{border-color:var(--b)}.opt.selected{border-color:var(--b);background:var(--soft)}.opt.correct{border-color:#10b981;background:#ecfdf5}.opt.wrong{border-color:#ef4444;background:#fef2f2}.dark .opt.correct{background:#0c3327}.dark .opt.wrong{background:#3a161b}.result{text-align:center;padding:35px}.score{font-size:58px;font-weight:800;color:var(--b)}
+.flash{max-width:650px;margin:25px auto;text-align:center}.flashcard{min-height:270px;display:grid;place-items:center;padding:40px;font-size:25px;font-weight:700}.flashcard small{display:block;font-size:13px;color:var(--muted);margin-top:12px}.flashBtns{display:flex;justify-content:center;gap:10px;margin-top:14px}
+.timer{text-align:center;font-size:52px;font-weight:800;margin:18px}.timerControls{display:flex;justify-content:center;gap:10px}
+footer{margin-top:50px;border-top:1px solid var(--line);padding:35px 0;color:var(--muted)}.footerGrid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.email{color:var(--b);font-weight:700}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;place-items:center;padding:20px;z-index:50}.modal.show{display:grid}.modalBox{max-width:620px;width:100%;background:var(--card);border-radius:18px;padding:24px;max-height:90vh;overflow:auto}.close{float:right;background:var(--soft);color:var(--b);padding:7px 10px;border-radius:9px}
+.toast{position:fixed;right:18px;bottom:18px;background:#172033;color:white;padding:12px 15px;border-radius:11px;opacity:0;transform:translateY(10px);transition:.25s;z-index:80}.toast.show{opacity:1;transform:none}
+.empty{text-align:center;padding:45px;color:var(--muted)}.hidden{display:none!important}
+@media(max-width:900px){.heroGrid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.featureGrid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}nav{display:none}.search{width:150px}}
+@media(max-width:600px){.wrap{padding:0 14px}.hero{padding-top:35px}.grid,.featureGrid{grid-template-columns:1fr}.hero h1{font-size:39px}.heroArt{min-height:250px}.search{display:none}.nav{height:64px}.section{padding:23px 0}.lessonRow{align-items:flex-start}.lessonRow .btn{padding:8px 10px;font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span>📚</span> Ôn Tập Tuyển Sinh 12</div>
+    <nav>
+      <button onclick="go('home')">Trang chủ</button>
+      <button onclick="go('subjects')">Môn học</button>
+      <button onclick="go('tests')">Luyện đề</button>
+      <button onclick="go('flashcards')">Flashcard</button>
+      <button onclick="go('progress')">Tiến độ</button><button onclick="go('members')">Thành viên</button>
+    </nav>
+    <input id="search" class="search" placeholder="Tìm bài học..." onkeydown="if(event.key==='Enter') doSearch()">
+    <div class="actions"><button class="iconbtn" onclick="toggleDark()" title="Đổi giao diện">🌙</button></div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap footerGrid">
+    <div>
+      <b>📚 Ôn Tập Tuyển Sinh 12</b><br>
+      Học thông minh hơn, tiến bộ từng ngày.
+    </div>
+    <div>
+      <b>👥 Thành viên thực hiện</b><br>
+      Nguyễn Phương Linh<br>
+      Nguyễn Văn Tấn Lộc<br>
+      Triệu Đình Nam<br>
+      Phan Nguyễn Quốc Nam
+    </div>
+    <div>
+      Liên hệ: <span class="email">ontaptuyensinh12@gmail.com</span><br>
+      <small>© 2026 Ôn Tập Tuyển Sinh 12</small>
+    </div>
+  </div>
+</footer>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalBox"><button class="close" onclick="closeModal()">✕</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div>
+
+<script>
+const subjects=[
+ {id:'toan',name:'Toán',icon:'📐',color:'blue',desc:'Hàm số, đạo hàm, nguyên hàm, hình học và xác suất.'},
+ {id:'van',name:'Ngữ văn',icon:'📖',color:'green',desc:'Đọc hiểu, nghị luận xã hội và nghị luận văn học.'},
+ {id:'anh',name:'Tiếng Anh',icon:'🇬🇧',color:'purple',desc:'Từ vựng, ngữ pháp, đọc hiểu và flashcard.'},
+ {id:'ly',name:'Vật lí',icon:'⚡',color:'orange',desc:'Cơ học, điện, dao động, sóng và vật lí hiện đại.'},
+ {id:'hoa',name:'Hóa học',icon:'🧪',color:'pink',desc:'Hóa vô cơ, hữu cơ, phản ứng và bài tập tính toán.'},
+ {id:'sinh',name:'Sinh học',icon:'🧬',color:'teal',desc:'Di truyền, tiến hóa, sinh thái và sinh học tế bào.'},
+ {id:'dia',name:'Địa lí',icon:'🌏',color:'cyan',desc:'Địa lí Việt Nam, dân cư, kinh tế và vùng lãnh thổ.'},
+ {id:'su',name:'Lịch sử',icon:'🏛️',color:'amber',desc:'Lịch sử Việt Nam và thế giới theo chương trình lớp 12.'},
+ {id:'ktpl',name:'KTPL',icon:'⚖️',color:'red',desc:'Kinh tế, pháp luật và các tình huống thực tiễn.'},
+ {id:'tin',name:'Tin học',icon:'💻',color:'indigo',desc:'Mạng máy tính, dữ liệu, thuật toán và ứng dụng.'}
+];
+
+const lessons=[
+ {s:'toan',title:'Ứng dụng đạo hàm khảo sát hàm số',type:'Bài học',text:'Ôn tập tính đơn điệu, cực trị, giá trị lớn nhất – nhỏ nhất và cách lập bảng biến thiên.'},
+ {s:'toan',title:'Nguyên hàm và tích phân',type:'Bài học',text:'Hệ thống công thức nguyên hàm cơ bản, phương pháp đổi biến và ứng dụng tích phân.'},
+ {s:'van',title:'Đọc hiểu văn bản',type:'Chuyên đề',text:'Nhận diện phương thức biểu đạt, thao tác lập luận, biện pháp tu từ và cách trả lời câu hỏi đọc hiểu.'},
+ {s:'van',title:'Nghị luận văn học',type:'Chuyên đề',text:'Cách xây dựng luận điểm, phân tích dẫn chứng, so sánh và liên hệ để bài viết mạch lạc.'},
+ {s:'anh',title:'Từ vựng theo chủ đề',type:'English',text:'Học từ vựng bằng flashcard, ví dụ ngắn và ôn lặp lại.'},
+ {s:'anh',title:'Grammar: Tenses & Clauses',type:'English',text:'Hệ thống các thì, mệnh đề quan hệ, câu điều kiện và cấu trúc thường gặp.'},
+ {s:'ly',title:'Dao động cơ',type:'Chuyên đề',text:'Các đại lượng đặc trưng, phương trình dao động và năng lượng.'},
+ {s:'hoa',title:'Este – Lipit',type:'Chuyên đề',text:'Cấu tạo, tính chất, phản ứng thủy phân và bài tập định lượng.'},
+ {s:'sinh',title:'Quy luật di truyền',type:'Chuyên đề',text:'Menđen, tương tác gen, liên kết gen và hoán vị gen.'},
+ {s:'dia',title:'Địa lí kinh tế Việt Nam',type:'Chuyên đề',text:'Các ngành kinh tế, thế mạnh và sự phân bố theo vùng.'},
+ {s:'su',title:'Bảo vệ Tổ quốc sau năm 1975',type:'Chuyên đề',text:'Những nội dung trọng tâm về bảo vệ biên giới và xây dựng đất nước.'},
+ {s:'ktpl',title:'Pháp luật và đời sống',type:'Chuyên đề',text:'Khái niệm, vai trò và cách xử lí tình huống pháp luật.'},
+ {s:'tin',title:'Thiết bị mạng',type:'Tin học',text:'Ôn tập các thiết bị mạng và vai trò trong hệ thống mạng.'}
+];
+
+const questions=[
+ {s:'toan',q:'Nếu hàm số có đạo hàm f′(x)>0 trên một khoảng thì hàm số có tính chất gì trên khoảng đó?',a:['Đồng biến','Nghịch biến','Không đổi','Không xác định'],c:0,e:'Đạo hàm dương trên khoảng ⇒ hàm số đồng biến trên khoảng đó.'},
+ {s:'toan',q:'Đạo hàm của x² là:',a:['x','2x','x²','2'],c:1,e:'Theo quy tắc lũy thừa, (x²)′ = 2x.'},
+ {s:'anh',q:'Choose the correct option: She ___ English every evening.',a:['study','studies','studied','studying'],c:1,e:'Chủ ngữ She ở thì hiện tại đơn nên động từ thêm -s.'},
+ {s:'anh',q:'The word “rapid” is closest in meaning to:',a:['slow','quick','weak','quiet'],c:1,e:'Rapid có nghĩa là nhanh, nhanh chóng.'},
+ {s:'van',q:'Trong nghị luận, luận điểm là gì?',a:['Ý kiến chính cần làm sáng tỏ','Một câu hỏi','Một dẫn chứng','Tên tác phẩm'],c:0,e:'Luận điểm là ý kiến chính mà người viết dùng lí lẽ và dẫn chứng để làm sáng tỏ.'},
+ {s:'ly',q:'Đơn vị SI của tần số là:',a:['N','J','Hz','W'],c:2,e:'Tần số có đơn vị SI là hertz (Hz).'},
+ {s:'hoa',q:'Công thức chung của ancol no, đơn chức, mạch hở là:',a:['CnH2n','CnH2n+1OH','CnH2n-2','CnH2n+2'],c:1,e:'Ancol no, đơn chức, mạch hở có dạng CnH2n+1OH.'},
+ {s:'sinh',q:'Đơn vị cơ bản của sự sống là:',a:['Mô','Cơ quan','Tế bào','Hệ cơ quan'],c:2,e:'Tế bào là đơn vị cấu trúc và chức năng cơ bản của sự sống.'},
+ {s:'dia',q:'Việt Nam nằm ở khu vực nào của châu Á?',a:['Tây Á','Đông Nam Á','Đông Bắc Á','Nam Á'],c:1,e:'Việt Nam thuộc khu vực Đông Nam Á.'},
+ {s:'tin',q:'Thiết bị dùng để kết nối các mạng khác nhau và định tuyến dữ liệu là:',a:['Router','Bàn phím','Màn hình','Máy in'],c:0,e:'Router thực hiện chức năng định tuyến và kết nối các mạng.'}
+];
+
+const flashcards=[
+ ['abandon','từ bỏ'],['achieve','đạt được'],['challenge','thách thức'],['environment','môi trường'],
+ ['opportunity','cơ hội'],['improve','cải thiện'],['reliable','đáng tin cậy'],['essential','thiết yếu'],
+ ['calculate','tính toán'],['evidence','bằng chứng'],['protect','bảo vệ'],['development','sự phát triển']
+];
+
+let state=JSON.parse(localStorage.getItem('otts12_state')||'null')||{xp:0,done:{},wrong:[],history:[],dark:false,streak:0,lastDay:'',flash:0,tasks:{}};
+function save(){localStorage.setItem('otts12_state',JSON.stringify(state))}
+function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function award(n){state.xp+=n;markDay();save();toast('✨ +'+n+' XP')}
+function markDay(){const d=today();if(state.lastDay!==d){state.streak++;state.lastDay=d}}
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>x.classList.remove('show'),2200)}
+function go(p){location.hash='#/'+p}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function subj(id){return subjects.find(x=>x.id===id)}
+function render(){const r=location.hash.replace(/^#\//,'')||'home';const [page,arg]=r.split('/');({home:home,subjects:subjectsPage,tests:testsPage,flashcards:flashPage,progress:progressPage,members:membersPage,lessons:lessonsPage,quiz:quizPage,contact:contactPage,plan:planPage,search:searchPage}[page]||home)(arg)}
+window.addEventListener('hashchange',render);
+
+function home(){
+ const done=Object.keys(state.done).length;
+ document.getElementById('app').innerHTML=`<section class="hero"><div class="wrap heroGrid"><div>
+ <span class="eyebrow">🎯 Ôn thi lớp 12 • Học chủ động</span>
+ <h1>Ôn thi thông minh.<br><em>Tiến bộ mỗi ngày.</em></h1>
+ <p>Ôn Tập Tuyển Sinh 12 giúp bạn hệ thống kiến thức, luyện trắc nghiệm, học flashcard và theo dõi tiến độ trong một giao diện hiện đại, dễ dùng.</p>
+ <div class="heroBtns"><button class="btn primary" onclick="go('subjects')">🚀 Bắt đầu học</button><button class="btn secondary" onclick="go('tests')">📝 Làm đề ngay</button></div>
+ </div><div class="heroArt"><div class="book"><h3>ÔN TẬP<br>TUYỂN SINH 12</h3><p>Learn • Practice • Improve</p><div class="bar"><i style="width:72%"></i></div></div><div class="float f1">🔥 ${state.streak} ngày liên tiếp</div><div class="float f2">⭐ ${state.xp} XP</div></div></div></section>
+ <section class="section"><div class="wrap"><div class="stats"><div class="card stat"><strong>${subjects.length}</strong><span>Môn học</span></div><div class="card stat"><strong>${lessons.length}</strong><span>Chuyên đề mẫu</span></div><div class="card stat"><strong>${questions.length}</strong><span>Câu luyện tập</span></div><div class="card stat"><strong>${done}</strong><span>Nội dung đã học</span></div></div></div></section>
+ <section class="section"><div class="wrap"><div class="sectionHead"><div><h2>Khám phá môn học</h2><div class="muted">Chọn môn để bắt đầu ôn tập.</div></div><button class="btn secondary" onclick="go('subjects')">Xem tất cả →</button></div><div class="grid">${subjects.slice(0,4).map(subjectCard).join('')}</div></div></section>
+ <section class="section"><div class="wrap"><div class="sectionHead"><div><h2>👥 Nhóm thực hiện</h2><div class="muted">Dự án Ôn Tập Tuyển Sinh 12 được thực hiện bởi 4 thành viên.</div></div></div>
+<div class="featureGrid">
+ <div class="card feature"><div class="ico">👩🏻‍💻</div><h3>Nguyễn Phương Linh</h3><div class="muted">Thành viên thực hiện</div></div>
+ <div class="card feature"><div class="ico">👨🏻‍💻</div><h3>Nguyễn Văn Tấn Lộc</h3><div class="muted">Thành viên thực hiện</div></div>
+ <div class="card feature"><div class="ico">👨🏻‍💻</div><h3>Triệu Đình Nam</h3><div class="muted">Thành viên thực hiện</div></div>
+ <div class="card feature"><div class="ico">👨🏻‍💻</div><h3>Phan Nguyễn Quốc Nam</h3><div class="muted">Thành viên thực hiện</div></div>
+</div></div></section>
+<section class="section"><div class="wrap"><div class="sectionHead"><div><h2>Học theo cách hiện đại</h2><div class="muted">Không chỉ học thuộc — hãy luyện tập và kiểm tra.</div></div></div><div class="featureGrid">
+ <div class="card feature"><div class="ico">🧠</div><h3>Flashcard thông minh</h3><div class="muted">Ôn từ vựng nhanh, đặc biệt hữu ích cho Tiếng Anh.</div></div>
+ <div class="card feature"><div class="ico">⏱️</div><h3>Pomodoro</h3><div class="muted">Chia thời gian học thành những phiên tập trung ngắn.</div></div>
+ <div class="card feature"><div class="ico">📊</div><h3>Theo dõi tiến độ</h3><div class="muted">XP, streak và lịch sử luyện đề giúp bạn thấy sự tiến bộ.</div></div>
+ </div></div></section>`;
+}
+function subjectCard(s){return `<div class="card subject" onclick="go('lessons/${s.id}')"><div class="subjectIcon">${s.icon}</div><h3>${s.name}</h3><div class="muted">${s.desc}</div><div class="bar"><i style="width:${Math.min(100,(Object.keys(state.done).filter(k=>k.startsWith(s.id)).length*25))}%"></i></div></div>`}
+
+function subjectsPage(){
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>📚 Môn học</h1><div class="muted">Hệ thống kiến thức theo từng môn.</div></div><div class="grid">${subjects.map(subjectCard).join('')}</div></div></div>`;
+}
+function lessonsPage(id){
+ const s=subj(id);if(!s)return subjectsPage();
+ const ls=lessons.filter(x=>x.s===id);
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>${s.icon} ${s.name}</h1><div class="muted">${s.desc}</div></div><div class="list">${ls.length?ls.map((l,i)=>`<div class="card lessonRow"><div class="grow"><span class="tag">${l.type}</span><h3>${l.title}</h3><div class="muted">${l.text}</div></div><button class="btn primary" onclick="openLesson('${id}',${i})">Học</button></div>`).join(''):'<div class="card empty">Nội dung đang được cập nhật.</div>'}</div></div></div>`;
+}
+function openLesson(id,i){
+ const ls=lessons.filter(x=>x.s===id),l=ls[i]; if(!l)return;
+ state.done[id+':'+l.title]=1;save();award(3);
+ document.getElementById('modalContent').innerHTML=`<span class="tag">${subj(id).name} • ${l.type}</span><h2>${l.title}</h2><p>${l.text}</p><div class="card"><b>📌 Gợi ý ôn tập</b><p>Đọc lại phần kiến thức trọng tâm, tự ghi 3 ý chính và làm câu luyện tập liên quan.</p></div><br><button class="btn primary" onclick="go('tests');closeModal()">Làm câu hỏi →</button>`;
+ document.getElementById('modal').classList.add('show');
+}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+
+function testsPage(){
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>📝 Luyện đề</h1><div class="muted">Làm bài, xem điểm và đọc giải thích ngay sau khi nộp.</div></div><div class="grid">
+ <div class="card"><h3>⚡ Quiz nhanh</h3><p class="muted">10 câu tổng hợp • 5 phút</p><button class="btn primary" onclick="startQuiz('all')">Bắt đầu</button></div>
+ ${subjects.slice(0,3).map(s=>`<div class="card"><h3>${s.icon} ${s.name}</h3><p class="muted">Câu hỏi luyện tập theo môn.</p><button class="btn secondary" onclick="startQuiz('${s.id}')">Luyện ngay</button></div>`).join('')}
+ </div></div></div>`;
+}
+let quiz={items:[],idx:0,answers:[],selected:null,started:0,limit:0};
+function startQuiz(s){
+ quiz.items=(s==='all'?questions:questions.filter(q=>q.s===s)).slice().sort(()=>Math.random()-.5);
+ if(!quiz.items.length){toast('Chưa có câu hỏi cho môn này');return}
+ quiz.idx=0;quiz.answers=[];quiz.selected=null;quiz.started=Date.now();quiz.limit=s==='all'?300:0;quiz.subject=s;go('quiz');
+}
+function quizPage(){
+ if(!quiz.items.length)return testsPage();
+ const q=quiz.items[quiz.idx],sel=quiz.selected;
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap quiz"><div class="card"><div class="qmeta"><span>Câu ${quiz.idx+1}/${quiz.items.length}</span><span id="qt">${quiz.limit?timeLeft():'Không giới hạn'}</span></div><div class="question">${esc(q.q)}</div><div class="options">${q.a.map((a,i)=>`<button class="opt ${sel===i?'selected':''}" onclick="choose(${i})">${String.fromCharCode(65+i)}. ${esc(a)}</button>`).join('')}</div><div style="display:flex;justify-content:space-between;margin-top:18px"><button class="btn secondary" onclick="go('tests')">Thoát</button><button class="btn primary" onclick="nextQ()">${quiz.idx===quiz.items.length-1?'Nộp bài':'Câu tiếp →'}</button></div></div></div></div>`;
+ if(quiz.limit) {clearInterval(window._qt);window._qt=setInterval(()=>{const x=document.getElementById('qt');if(!x)return; x.textContent=timeLeft();if(timeLeft()==='00:00'){clearInterval(window._qt);finishQuiz()}},500)}
+}
+function timeLeft(){let left=Math.max(0,quiz.limit-Math.floor((Date.now()-quiz.started)/1000));return String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0')}
+function choose(i){quiz.selected=i;render()}
+function nextQ(){if(quiz.selected===null){toast('Hãy chọn một đáp án trước nhé!');return}quiz.answers[quiz.idx]=quiz.selected;if(quiz.idx<quiz.items.length-1){quiz.idx++;quiz.selected=null;render()}else finishQuiz()}
+function finishQuiz(){clearInterval(window._qt);let score=quiz.items.reduce((n,q,i)=>n+(quiz.answers[i]===q.c?1:0),0);state.history.push({date:today(),score,total:quiz.items.length});state.history=state.history.slice(-30);award(score*5+10);document.getElementById('app').innerHTML=`<div class="page"><div class="wrap quiz"><div class="card result"><div>🎉 Hoàn thành!</div><div class="score">${score}/${quiz.items.length}</div><p class="muted">Bạn nhận được ${score*5+10} XP.</p><button class="btn primary" onclick="reviewQuiz(${score})">Xem đáp án & giải thích</button> <button class="btn secondary" onclick="go('tests')">Làm đề khác</button></div></div></div>`}
+function reviewQuiz(score){
+ const wrong=quiz.items.map((q,i)=>({q,i})).filter(x=>quiz.answers[x.i]!==x.q.c);
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>🔎 Xem lại bài</h1><div class="muted">Điểm: ${score}/${quiz.items.length}</div></div><div class="list">${quiz.items.map((q,i)=>`<div class="card"><b>${i+1}. ${esc(q.q)}</b><p>Đáp án đúng: <b>${String.fromCharCode(65+q.c)}. ${esc(q.a[q.c])}</b></p><div class="muted">💡 ${esc(q.e)}</div></div>`).join('')}</div></div></div>`;
+}
+
+function flashPage(){
+ const f=flashcards[state.flash%flashcards.length];
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap flash"><div class="pageTitle"><h1>🧠 Flashcard Tiếng Anh</h1><div class="muted">Học từ vựng ngắn gọn, dễ ôn lại.</div></div><div class="card flashcard" id="fc"><div><div>${esc(f[0])}</div><small>Nhấn “Hiện nghĩa” để kiểm tra</small></div></div><div class="flashBtns"><button class="btn secondary" onclick="showMeaning()">👀 Hiện nghĩa</button><button class="btn primary" onclick="nextFlash()">✓ Nhớ rồi</button></div><p class="muted">${(state.flash%flashcards.length)+1}/${flashcards.length}</p></div></div>`;
+}
+function showMeaning(){const f=flashcards[state.flash%flashcards.length];document.querySelector('#fc small').textContent=f[1];award(1)}
+function nextFlash(){state.flash++;save();award(2);render()}
+
+let pom={running:false,sec:25*60};
+function planPage(){
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>⏱️ Góc tập trung</h1><div class="muted">Pomodoro 25 phút học + nghỉ ngắn.</div></div><div class="card" style="text-align:center"><div id="pomo" class="timer">${fmt(pom.sec)}</div><div class="timerControls"><button class="btn primary" onclick="togglePomo()">${pom.running?'Tạm dừng':'Bắt đầu'}</button><button class="btn secondary" onclick="resetPomo()">Đặt lại</button></div></div></div></div>`;
+}
+function fmt(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function togglePomo(){pom.running=!pom.running;clearInterval(window._pomo);if(pom.running)window._pomo=setInterval(()=>{pom.sec--;if(pom.sec<=0){clearInterval(window._pomo);pom.running=false;pom.sec=5*60;award(10);toast('🎉 Hoàn thành một phiên học!');}const x=document.getElementById('pomo');if(x)x.textContent=fmt(pom.sec)},1000);render()}
+function resetPomo(){clearInterval(window._pomo);pom.running=false;pom.sec=25*60;render()}
+
+function progressPage(){
+ const hist=state.history,avg=hist.length?(hist.reduce((a,x)=>a+x.score/x.total*10,0)/hist.length).toFixed(1):'–';
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>📊 Tiến độ của bạn</h1><div class="muted">Theo dõi hành trình học tập.</div></div><div class="stats"><div class="card stat"><strong>${state.xp}</strong><span>XP</span></div><div class="card stat"><strong>${state.streak}</strong><span>Ngày liên tiếp</span></div><div class="card stat"><strong>${hist.length}</strong><span>Lần luyện đề</span></div><div class="card stat"><strong>${avg}</strong><span>Điểm TB / 10</span></div></div><br><div class="card"><h3>📚 Tiến độ môn học</h3>${subjects.map(s=>{let n=Object.keys(state.done).filter(k=>k.startsWith(s.id+':')).length;let p=Math.min(100,n/2*100);return `<div style="margin:14px 0"><div style="display:flex;justify-content:space-between"><b>${s.icon} ${s.name}</b><span class="muted">${Math.round(p)}%</span></div><div class="bar"><i style="width:${p}%"></i></div></div>`}).join('')}</div></div></div>`;
+}
+function membersPage(){
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>👥 Thành viên thực hiện</h1><div class="muted">Nhóm thực hiện website Ôn Tập Tuyển Sinh 12.</div></div><div class="grid">
+ <div class="card feature"><div class="ico">👩🏻‍💻</div><h3>Nguyễn Phương Linh</h3><div class="muted">Thành viên</div></div>
+ <div class="card feature"><div class="ico">👨🏻‍💻</div><h3>Nguyễn Văn Tấn Lộc</h3><div class="muted">Thành viên</div></div>
+ <div class="card feature"><div class="ico">👨🏻‍💻</div><h3>Triệu Đình Nam</h3><div class="muted">Thành viên</div></div>
+ <div class="card feature"><div class="ico">👨🏻‍💻</div><h3>Phan Nguyễn Quốc Nam</h3><div class="muted">Thành viên</div></div>
+ </div></div></div>`;
+}
+function contactPage(){
+ document.getElementById('app').innerHTML=`<div class="page"><div class="wrap" style="max-width:760px"><div class="pageTitle"><h1>💌 Liên hệ</h1><div class="muted">Góp ý để Ôn Tập Tuyển Sinh 12 ngày càng tốt hơn.</div></div><div class="card"><label>Họ và tên<br><input id="cn" class="search" style="width:100%;margin:6px 0 14px" placeholder="Nhập họ tên"></label><label>Email<br><input id="ce" class="search" style="width:100%;margin:6px 0 14px" placeholder="email@example.com"></label><label>Chủ đề<br><select id="ct" class="search" style="width:100%;margin:6px 0 14px"><option>Góp ý website</option><option>Báo lỗi</option><option>Đề xuất tính năng</option><option>Khác</option></select></label><label>Nội dung<br><textarea id="cm" class="search" style="width:100%;min-height:150px;margin:6px 0 14px" placeholder="Viết nội dung..."></textarea></label><button class="btn primary" onclick="sendContact()">📨 Gửi email</button><p id="cr" class="muted"></p></div></div></div>`;
+}
+function sendContact(){const n=document.getElementById('cn').value.trim(),e=document.getElementById('ce').value.trim(),m=document.getElementById('cm').value.trim(),s=document.getElementById('ct').value;if(!n||!/^\S+@\S+\.\S+$/.test(e)||!m){document.getElementById('cr').textContent='Vui lòng nhập đầy đủ thông tin.';return}const body=`Họ và tên: ${n}\\nEmail: ${e}\\nChủ đề: ${s}\\n\\nNội dung:\\n${m}`;location.href='mailto:ontaptuyensinh12@gmail.com?subject='+encodeURIComponent('[Ôn Tập Tuyển Sinh 12] '+s)+'&body='+encodeURIComponent(body);document.getElementById('cr').textContent='Đã tạo email. Hãy bấm Gửi trong ứng dụng email của bạn.'}
+
+function searchPage(q=''){const term=decodeURIComponent(q||'').trim().toLowerCase();const out=lessons.filter(l=>(l.title+' '+l.text).toLowerCase().includes(term)||subj(l.s).name.toLowerCase().includes(term));document.getElementById('app').innerHTML=`<div class="page"><div class="wrap"><div class="pageTitle"><h1>🔎 Tìm kiếm</h1><div class="muted">Kết quả cho “${esc(term)}”</div></div><div class="list">${out.length?out.map(l=>`<div class="card lessonRow"><div class="grow"><span class="tag">${subj(l.s).name}</span><h3>${esc(l.title)}</h3><div class="muted">${esc(l.text)}</div></div><button class="btn primary" onclick="go('lessons/${l.s}')">Xem</button></div>`).join(''):'<div class="card empty">Không tìm thấy nội dung phù hợp.</div>'}</div></div></div>`}
+function doSearch(){const q=document.getElementById('search').value.trim();if(q)go('search/'+encodeURIComponent(q))}
+function toggleDark(){state.dark=!state.dark;document.body.classList.toggle('dark',state.dark);save()}
+document.body.classList.toggle('dark',state.dark);
+function init(){if(!location.hash || location.hash==='#')location.hash='#/home';else render()}
+init();
+</script>
+</body>
+</html>
